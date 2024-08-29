@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <p><input type="number" id="ageToCheck" value="30"></p>
+        <button onclick="myFunction()">try it</button>
+        <p id="demo"></p>
+
+    <script>
+        // const numbers = [65, 44, 12, 4]
+        // numbers.forEach(myFunction)
+
+        // function myFunction(item, index, arr){
+        //     arr[index] = item * 10
+        // }
+
+        // console.log(numbers)
+
+        // const numeros = [1, 2, 3, 4,5]
+        // const multiplicarPorDois = numeros.map(numero => numero * 2)
+
+        // const calcularQuadrado = numeros.map(numero => numero ** 2)
+
+        // console.log('orignal:', numeros)
+        // console.log(`multpicado por 2: ${multiplicarPorDois}`)
+        // console.log(`quadrado do numero: ${calcularQuadrado}`)
+
+        // const arr = ['a', 'b', 'c', 'd', 'e', 'f' ]
+
+        // function tornaMaiscula(elemento, indice, array){
+        //     return elemento.toUpperCase()
+        // }
+
+        // const newArr = arr.map(tornaMaiscula)
+        // const newArr2 = arr.map(elemento => elemento.toUpperCase())
+
+        // console.log(newArr)
+        // console.log(newArr2)
+
+        const ages = [32, 33, 12, 40]
+        function checkAge(age){
+            return age > document.getElementById('ageToCheck').value
+
+        }
+
+        function myFunction(){
+            document.getElementById('demo').innerHTML = ages.filter(checkAge)
+        }
+    </script>
+</body>
+</html>

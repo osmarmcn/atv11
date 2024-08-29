@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <p id="res"></p>
+    <script>
+        let res = document.getElementById('res')
+        let lista = [50, 45, 67, 89, 10, 5]
+
+        let multiplicar = lista.map(numero => numero * 2)
+        res.innerHTML = multiplicar
+    </script>
+</body>
+</html>
